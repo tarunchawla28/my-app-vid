@@ -5,6 +5,8 @@ const Joi = require('joi');
 const { Genre, validate } = require('../model/genre');
 const auth = require('../middleware/auth');
 const admin = require('../middleware/admin');
+const asyncMiddleware = require('../middleware/async');
+const logger = require('../logger/logger');
 /*const genreSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -27,10 +29,30 @@ const admin = require('../middleware/admin');
     { id: 3, name: 'Romance' }
 ];*/
 
-router.get('/', async (req, res) => {
+/*function asyncMiddleware(handler) {
+    return async (req, res, next) => {
+        try {
+            await handler(req, res);
+        } catch (ex) {
+            next(ex);
+        }
+    }
+}
+*/
+//throw new Error('Hello, winston!');
+
+router.get('/', asyncMiddleware(async (req, res) => {
     const genres = await Genre.find().sort('name');
+
+    logger.log('info', 'A request was received,Ok');
+   // logger.end();
+    //logger.log('error', new Error('Error passed as message'));
+    //logger.warn(new Error('Error passed as info'));
+    //logger.log('error', new Error('Error passed as message'));
+
+    
     res.send(genres);
-});
+}));
 
 router.post('/', auth, async (req, res) => {
     const { error } = validate(req.body);

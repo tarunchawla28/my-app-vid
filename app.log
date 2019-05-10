@@ -1,0 +1,35 @@
+2019-05-09T15:16:11.825Z info: A request was received
+2019-05-09T15:16:31.177Z info: A request was received
+2019-05-09T15:18:17.554Z info: A request was received
+undefined info: A request was received
+{"level":"info","message":"A request was received","timestamp":"2019-05-09 20:54:26"}
+{"level":"info","message":"A request was received","timestamp":"2019-05-09 20:54:46"}
+{"level":"info","message":"A request was received","timestamp":"2019-05-09 20:55:35"}
+{"level":"info","message":"A request was received","timestamp":"2019-05-09 21:00:38"}
+{"level":"info","message":"Pass an object and this works","additional":"properties","are":"passed along","timestamp":"2019-05-09 21:00:38"}
+{"level":"info","message":"A request was received","timestamp":"2019-05-09 23:38:08"}
+{"level":"info","message":"A request was received","timestamp":"2019-05-09 23:40:15"}
+{"level":"warn","message":"A request was received","timestamp":"2019-05-09 23:45:08"}
+{"level":"warn","message":"A request was received","timestamp":"2019-05-09 23:46:01"}
+{"level":"warn","message":"A request was received","timestamp":"2019-05-09 23:47:00"}
+{"level":"warn","message":"A request was received","timestamp":"2019-05-09 23:47:00"}
+{"level":"info","message":"A request was received","timestamp":"2019-05-09 23:47:43"}
+{"level":"warn","message":"A request was received","timestamp":"2019-05-09 23:48:56"}
+[35msilly[39m: A request was received,Ok
+{"message":"A request was received,Ok","level":"\u001b[35msilly\u001b[39m","timestamp":"2019-05-10 00:09:02"}
+{"message":"A request was received,Ok","level":"\u001b[35msilly\u001b[39m","timestamp":"2019-05-10 00:10:14"}
+{"message":"A request was received,Ok","level":"\u001b[35msilly\u001b[39m"}
+[35msilly[39m: A request was received,Ok
+[35msilly[39m: A request was received,Ok
+[35msilly[39m: A request was received,Ok
+[35msilly[39m: A request was received,Ok
+{"message":"A request was received,Ok","level":"warn"}
+{"message":"A request was received,Ok","level":"warn"}
+{"message":"A request was received,Ok","level":"warn"}
+{"message":"A request was received,Ok","level":"warn"}
+{"message":"A request was received,Ok","level":"warn"}
+{"level":"error"}
+{"level":"warn"}
+{"level":"error"}
+{"level":"warn"}
+{"level":"error"}
