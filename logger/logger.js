@@ -1,6 +1,7 @@
 const winston = require('winston');
 const { createLogger, format, transports } = require('winston');
 const { combine, errors, json } = format;
+const fs = require('fs');
 //require('winston-mongodb');
 //winston.add(winston.transports.File, { filename: 'logfile.log' });
 //winston.add(winston.transports.MongoDB, { db: 'mongodb://localhost/vidly', level: 'error' })
@@ -19,26 +20,27 @@ const { combine, errors, json } = format;
 
 //Seventh Example -> ../logger/logger7.js
 
-
 //Eighth Example -> ../loger/logger8.js
 
 //Ninth Example -> ../logger/logger9.js
 
+//Tenth Example -> ../logger/logger10.js
 
-const ignorePrivate = format((info, opts) => {
-    if (info.private) { return false; }
-    return info;
-  });
-  
-  const logger = createLogger({
-    format: format.combine(
-      ignorePrivate(),
-      format.json()
-    ),
-    transports: [new transports.Console()]
-  });
-  
+//Eleventh Example -> ../logger/logger11.js
 
+//Twelth Example -> ../logger/logger12.js
+
+//Thirteenth Example -> ../logger/logger13.js
+
+//Forteenth Example -> ../logger/logger14.js
+  
+//Fifteenth Example -> ../logger/logger15.js
+
+const logger = winston.createLogger({
+    //format: winston.format.combine(errorStackFormat()),
+    transports: [
+    new winston.transports.File({ filename: 'app.log' })],
+});
 module.exports = logger;
 // logger.log('info', 'A request was received');
 // logger.log({

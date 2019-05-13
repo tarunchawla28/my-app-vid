@@ -1,3 +1,7 @@
 {"level":"error"}
 {"level":"error"}
 {"level":"error"}
+error: email.message is shown {"subject":"Hello, World!","message":"This message is a unique property separate from implicit merging."}
+error: email.message is shown {"subject":"Hello, World!","message":"This message is a unique property separate from implicit merging."}
+error: email.message is shown [object Object]
+error: email.message is shown [object Object]

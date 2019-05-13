@@ -39,18 +39,38 @@ const logger = require('../logger/logger');
     }
 }
 */
-//throw new Error('Hello, winston!');
+
 
 router.get('/', asyncMiddleware(async (req, res) => {
     const genres = await Genre.find().sort('name');
 
-    logger.log('info', 'A request was received,Ok');
-   // logger.end();
+
+    //logger.log(true, 'info', 'A request was received,Ok');
+    // logger.end();
     //logger.log('error', new Error('Error passed as message'));
     //logger.warn(new Error('Error passed as info'));
     //logger.log('error', new Error('Error passed as message'));
+    // logger.info({
+    //     private: true,
+    //     level: 'error',
+    //     message: 'This is super secret - hide it.'
+    // });
+    //logger.log('info','transaction ok %s','I am Tarun');
+    //logger.info('my message', { reason: 'whatever', promise: 'whenever' });
 
-    
+
+    /*const meta = {
+        subject: 'Hello, World!',
+        message: 'This message is a unique property separate from implicit merging.',
+      };
+      
+      logger.simple.info('email.message is hidden', meta);
+      logger.simple.warn('email.message is hidden %j', meta);
+        
+    logger.splat.info('This is overridden by meta', meta);
+    logger.splat.error('email.message is shown %j', meta);*/
+
+    logger.log('info', 'Get request for genre');
     res.send(genres);
 }));
 
